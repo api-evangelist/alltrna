@@ -1,23 +1,65 @@
 aid: alltrna
+
 name: Alltrna
-description: 'Alltrna is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Alltrna develops engineered transfer RNA (tRNA) medicines that correct premature termination (stop) codons and restore full‑length protein production. The company applies its tRNA platform to create universal genetic medicines for thousands of diseases caused by shared genetic mutations, focusing on rare and genetic disorders. It targets patients with nonsense mutations and other genetic diseases requiring protein restoration.'
+
 url: https://raw.githubusercontent.com/api-evangelist/alltrna/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- tRNA therapeutics
+- genetic medicine
+- rare disease
+- platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/alltrna-hosts.yml
+- type: Vendors
+  url: vendors/alltrna-vendors.yml
+- type: TermsOfService
+  url: https://www.alltrna.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.alltrna.com/privacy-policy
+- type: Newsroom
+  url: https://www.alltrna.com/newsroom
+- type: DomainSecurity
+  url: security/alltrna-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/alltrna_stock/
+  url: https://www.alltrna.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
